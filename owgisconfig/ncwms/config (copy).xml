@@ -1,0 +1,391 @@
+<config>
+   <datasets>
+      <dataset id="gulf_vel" location="/ServerData/ncWMS_Layers/velocity/*.nc" queryable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" title="gulf_vel" updateInterval="-1">
+         <variables>
+            <variable id="v" title="northward_sea_water_velocity" colorScaleRange="-1.7142422 2.0783627" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="u" title="eastward_sea_water_velocity" colorScaleRange="-1.3390408 2.0848439" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="sea_water_velocity" title="sea_water_velocity" colorScaleRange="-0.104533136 2.2121654" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+         </variables>
+      </dataset>
+      <dataset id="world_temp" location="/ServerData/ncWMS_Layers/one_date_mult_depths/*.nc" queryable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" title="world_temp" updateInterval="-1">
+         <variables>
+            <variable id="ua" title="eastward_wind" colorScaleRange="-15.485961 13.547655" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="pr" title="precipitation_flux" colorScaleRange="-1.4965476E-5 3.14275E-4" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="tas" title="air_temperature" colorScaleRange="200.0551 314.19363" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="area" title="Surface area" colorScaleRange="-1.24475648E8 2.55107523E10" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="msk_rgn" title="Mask region" colorScaleRange="-0.05 1.05" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+         </variables>
+      </dataset>
+      <dataset id="gulf_temp" location="/ServerData/ncWMS_Layers/multiple_dates_multiple_depths/*.nc" queryable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" title="gulf_temp" updateInterval="-1">
+         <variables>
+            <variable id="temperature" title="sea_water_potential_temperature" colorScaleRange="14.399689 27.824318" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+         </variables>
+      </dataset>
+      <dataset id="global_uv_2015" location="/ServerData/ncWMS_Layers/global/hycom_glb_911_2015010100_t000_uv3z.nc" queryable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" title="global_uv_2015" updateInterval="-1">
+         <variables>
+            <variable id="water_u" title="eastward_sea_water_velocity" colorScaleRange="-1.58905 1.80005" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="water_v" title="northward_sea_water_velocity" colorScaleRange="-2.38415 1.4031501" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="sea_water_velocity" title="sea_water_velocity" colorScaleRange="-0.12307868 2.5846522" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+         </variables>
+      </dataset>
+      <dataset id="global_ts_2015" location="/ServerData/ncWMS_Layers/global/hycom_glb_911_2015010100_t000_ts3z.nc" queryable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" title="global_ts_2015" updateInterval="-1">
+         <variables>
+            <variable id="water_temp" title="sea_water_temperature" colorScaleRange="-3.6319513 33.10695" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="salinity" title="sea_water_salinity" colorScaleRange="1.717749 42.379253" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+         </variables>
+      </dataset>
+      <dataset id="hycom_forecast_ts" location="/ServerData/GlobalHycomData/*ts3z.nc*" queryable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" title="hycom_forecast_ts" updateInterval="60">
+         <variables>
+            <variable id="water_temp" title="sea_water_temperature" colorScaleRange="-3.731451 36.31845" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="salinity" title="sea_water_salinity" colorScaleRange="1.7568992 41.9311" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+         </variables>
+      </dataset>
+      <dataset id="hycom_forecast_ssh" location="/ServerData/GlobalHycomData/*ssh.nc*" queryable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" title="hycom_forecast_ssh" updateInterval="60">
+         <variables>
+            <variable id="surf_el" title="sea_surface_elevation" colorScaleRange="-2.2023 1.6763002" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+         </variables>
+      </dataset>
+      <dataset id="hycom_forecast_uv" location="/ServerData/GlobalHycomData/*uv3z.nc*" queryable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" title="hycom_forecast_uv" updateInterval="60">
+         <variables>
+            <variable id="water_u" title="eastward_sea_water_velocity" colorScaleRange="-1.8073001 1.9613001" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="water_v" title="northward_sea_water_velocity" colorScaleRange="-1.5677501 2.25475" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="sea_water_velocity" title="sea_water_velocity" colorScaleRange="-0.11118692 2.3349254" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+         </variables>
+      </dataset>
+      <dataset id="gfs_forecast" location="/ServerData/GlobalGFSData/*nc" queryable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" title="gfs_forecast" updateInterval="60">
+         <variables>
+            <variable id="temp_tropo" title="Temp_Tropopause" colorScaleRange="180.46501 249.435" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="u_wind_t" title="northward_wind_t" colorScaleRange="-41.980003 87.38" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="v_wind_t" title="eastward_wind_t" colorScaleRange="-57.850002 73.049995" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="temp_isobar" title="Isobaric Temp" colorScaleRange="234.555 314.745" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="u_wind_iso" title="northward_wind_iso" colorScaleRange="-34.864998 35.205" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="v_wind_iso" title="eastward_wind_iso" colorScaleRange="-27.6025 29.6525" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="temp_havsl" title="Temp_height_avsl" colorScaleRange="222.6225 313.6475" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="temp_aavsl" title="Temp_alt_avsl" colorScaleRange="234.675 301.225" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="u_wind_aasl" title="northward_wind_aasl" colorScaleRange="-42.36 44.54" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="v_wind_aasl" title="eastward_wind_aasl" colorScaleRange="-34.483997 39.963997" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_t" title="wind_t" colorScaleRange="-3.935443 85.75557" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_iso" title="wind_iso" colorScaleRange="0.0 252.0" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_aasl" title="wind_aasl" colorScaleRange="-1.9683852 45.06961" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="temp_surf" title="Temp Surface" colorScaleRange="212.74501 323.955" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="temp_abvgrd" title="Temperature_Above Ground" colorScaleRange="222.6225 313.6475" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="humidity_twom" title="Humidity at 2 mts" colorScaleRange="4.03 104.57" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="prec_water" title="Prec_water" colorScaleRange="-3.7000003 82.100006" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="pres_msl" title="MSL Pressure" colorScaleRange="94443.18 105476.625" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="plan_height" title="Planetary Height" colorScaleRange="-127.188 3088.948" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="tot_cloud" title="Total Cloud Cover" colorScaleRange="-2.95 83.95" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="sun_dur" title="Sunshine duration" colorScaleRange="-1075.8 22679.8" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="conv_en" title="Convective Potencial Energy" colorScaleRange="-146.85 3105.85" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="surf_idx" title="Surface lifted index" colorScaleRange="-9.71 45.51" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="tot_ozone" title="Total ozone" colorScaleRange="207.475 496.225" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="tot_ice_cov" title="Total Ice Cover" colorScaleRange="-0.039499998 1.0495" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="pres_grd" title="Ground Pressure" colorScaleRange="47540.24 106213.36" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="u_isobar" title="northward_wind_iso" colorScaleRange="-34.864998 35.205" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="v_isobar" title="eastward_wind_iso" colorScaleRange="-27.6025 29.6525" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="abs_vort" title="Absolute Vorticity" colorScaleRange="-5.381E-4 4.981E-4" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="geo_hight_isobar" title="Geopotencial Height" colorScaleRange="-449.90982 443.04382" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="humidity_isobar" title="Humidity Isobaric" colorScaleRange="-0.8000002 104.8" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="u_abvgrd" title="northward_wind_abvgrd" colorScaleRange="-33.219997 33.219997" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="v_abvgrd" title="eastward_wind_abvgrd" colorScaleRange="-23.886 28.165998" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_abvgrd" title="wind_abvgrd" colorScaleRange="0.0 252.0" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="geo_height_isobar" title="Geopotencial Height" colorScaleRange="-449.90982 443.04382" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+         </variables>
+      </dataset>
+      <dataset id="wrf_forecast_d1" location="/ServerData/WRF_OWGIS/Dom1*.nc" queryable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" title="wrf_forecast_d1" updateInterval="60">
+         <variables>
+            <variable id="Uat10" title="eastward_wind_ten_velocity" colorScaleRange="-11.631096 16.777409" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Vat10" title="northward_wind_ten_velocity" colorScaleRange="-14.398436 13.70921" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="WS10" title="WS10" colorScaleRange="-3.9378033 82.78434" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PREC2" title="PREC2" colorScaleRange="0.0 400.0" palette="prec" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="T2C" title="T2C" colorScaleRange="-15.0 55.0" palette="temp" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="SSTC" title="SSTC" colorScaleRange="-13.069918 33.461243" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PREC2B" title="PREC2B" colorScaleRange="-7.30257 153.35396" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Uat250" title="eastward_wind_250" colorScaleRange="-14.083111 58.954502" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Vat250" title="northward_wind_250" colorScaleRange="-36.294197 53.196747" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="WSat250" title="upward_wind_velocity_250" colorScaleRange="-9.74825 218.42902" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Uat500" title="eastward_wind_500" colorScaleRange="-16.362627 33.135593" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Vat500" title="northward_wind_500" colorScaleRange="-22.915672 43.76257" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="WSat500" title="upward_wind_velocity_500" colorScaleRange="-7.3286514 165.23735" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Uat700" title="eastward_wind_700" colorScaleRange="-14.30734 26.454643" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Vat700" title="northward_wind_700" colorScaleRange="-17.630775 27.051334" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="WSat700" title="upward_wind_velocity_700" colorScaleRange="-5.0013437 109.25782" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Uat850" title="eastward_wind_850" colorScaleRange="-15.130176 24.116436" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Vat850" title="northward_wind_850" colorScaleRange="-15.307712 25.26797" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="WSat850" title="upward_wind_velocity_850" colorScaleRange="-3.964283 89.046524" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PRECH" title="acc_prec" colorScaleRange="0.0 400.0" palette="prec" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PRECA3" title="prec_acu_three" colorScaleRange="0.0 400.0" palette="prec" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PRECA6" title="prec_acu_six" colorScaleRange="0.0 400.0" palette="prec" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_ten_velocity" title="wind_ten_velocity" colorScaleRange="0.0 252.0" palette="wind" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_250" title="wind_250" colorScaleRange="0.0 252.0" palette="wind" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_500" title="wind_500" colorScaleRange="0.0 252.0" palette="wind" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_700" title="wind_700" colorScaleRange="0.0 252.0" palette="wind" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_850" title="wind_850" colorScaleRange="0.0 252.0" palette="wind" scaling="linear" numColorBands="250" disabled="false"/>
+         </variables>
+      </dataset>
+      <dataset id="wrf_forecast_d2" location="/ServerData/WRF_OWGIS/Dom2*.nc" queryable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" title="wrf_forecast_d2" updateInterval="60">
+         <variables>
+            <variable id="Uat10" title="eastward_wind_ten_velocity" colorScaleRange="-6.349747 13.756037" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Vat10" title="northward_wind_ten_velocity" colorScaleRange="-14.132351 15.958042" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="WS10" title="WS10" colorScaleRange="-3.267878 68.650505" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PREC2" title="PREC2" colorScaleRange="0.0 400.0" palette="prec" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="T2C" title="T2C" colorScaleRange="-15.0 55.0" palette="temp" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="SSTC" title="SSTC" colorScaleRange="0.2991562 32.744087" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PREC2B" title="PREC2B" colorScaleRange="-11.8101425 248.013" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Uat250" title="eastward_wind_250" colorScaleRange="3.0931334 40.45525" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Vat250" title="northward_wind_250" colorScaleRange="7.0106225 30.608366" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="WSat250" title="upward_wind_velocity_250" colorScaleRange="38.26129 168.07271" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Uat500" title="eastward_wind_500" colorScaleRange="-1.1041164 29.36749" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Vat500" title="northward_wind_500" colorScaleRange="-4.7465 22.389763" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="WSat500" title="upward_wind_velocity_500" colorScaleRange="5.485907 131.61638" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Uat700" title="eastward_wind_700" colorScaleRange="-1.3791502 22.924995" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Vat700" title="northward_wind_700" colorScaleRange="-8.928177 18.650898" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="WSat700" title="upward_wind_velocity_700" colorScaleRange="-1.300406 91.786545" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Uat850" title="eastward_wind_850" colorScaleRange="-7.62942 11.878058" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Vat850" title="northward_wind_850" colorScaleRange="-8.098016 19.976475" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="WSat850" title="upward_wind_velocity_850" colorScaleRange="-3.079583 70.76683" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PRECH" title="acc_prec" colorScaleRange="0.0 400.0" palette="prec" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PRECA3" title="prec_acu_three" colorScaleRange="0.0 400.0" palette="prec" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PRECA6" title="prec_acu_six" colorScaleRange="0.0 400.0" palette="prec" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_ten_velocity" title="wind_ten_velocity" colorScaleRange="0.0 252.0" palette="wind" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_250" title="wind_250" colorScaleRange="0.0 252.0" palette="wind" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_500" title="wind_500" colorScaleRange="0.0 252.0" palette="wind" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_700" title="wind_700" colorScaleRange="0.0 252.0" palette="wind" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_850" title="wind_850" colorScaleRange="0.0 252.0" palette="wind" scaling="linear" numColorBands="250" disabled="false"/>
+         </variables>
+      </dataset>
+      <dataset id="wrf_hist" location="/ServerData/WRF_OWGIS_HIST/Dom2_2016-04-30.nc" queryable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" title="wrf_hist" updateInterval="-1">
+         <variables>
+            <variable id="Uat10" title="eastward_wind_ten_velocity" colorScaleRange="-11.02591 13.305842" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Vat10" title="northward_wind_ten_velocity" colorScaleRange="-12.908664 13.180706" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="WS10" title="WS10" colorScaleRange="-3.021757 65.2131" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PREC2" title="PREC2" colorScaleRange="-2.0415847 42.87328" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="T2C" title="T2C" colorScaleRange="10.614668 41.22557" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="SSTC" title="SSTC" colorScaleRange="9.158496 40.77705" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PREC2B" title="PREC2B" colorScaleRange="-2.0415847 42.87328" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Uat250" title="eastward_wind_250" colorScaleRange="-1.351541 36.706966" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Vat250" title="northward_wind_250" colorScaleRange="0.9935497 11.468801" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="WSat250" title="upward_wind_velocity_250" colorScaleRange="5.8734546 134.15048" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Uat500" title="eastward_wind_500" colorScaleRange="-6.416052 26.953135" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Vat500" title="northward_wind_500" colorScaleRange="-6.100384 8.603329" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="WSat500" title="upward_wind_velocity_500" colorScaleRange="-4.1855955 98.78894" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Uat700" title="eastward_wind_700" colorScaleRange="-8.675835 16.323662" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Vat700" title="northward_wind_700" colorScaleRange="-8.797168 12.707823" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="WSat700" title="upward_wind_velocity_700" colorScaleRange="-2.5673227 58.097275" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Uat850" title="eastward_wind_850" colorScaleRange="-14.61167 14.216089" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Vat850" title="northward_wind_850" colorScaleRange="-9.889979 11.372108" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="WSat850" title="upward_wind_velocity_850" colorScaleRange="-2.2908595 55.664516" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PRECH" title="acc_prec" colorScaleRange="-0.20565186 4.318689" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PRECA3" title="prec_acu_three" colorScaleRange="-0.32717252 6.8706226" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PRECA6" title="prec_acu_six" colorScaleRange="-0.001089974 0.022889573" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_ten_velocity" title="wind_ten_velocity" colorScaleRange="-0.4723168 15.169867" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_250" title="wind_250" colorScaleRange="1.6315153 37.264023" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_500" title="wind_500" colorScaleRange="-1.1626655 27.441374" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_700" title="wind_700" colorScaleRange="-0.71314526 16.138132" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_850" title="wind_850" colorScaleRange="-0.6363498 15.462366" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+         </variables>
+      </dataset>
+      <dataset id="wrf1_dom1" location="/ServerData/OWGIS/WRF/Dom1_2017-09-05.nc" queryable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" title="wrf_dom1" updateInterval="-1">
+         <variables>
+            <variable id="Uat10" title="eastward_wind_ten_velocity" colorScaleRange="-15.57605 13.285819" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Vat10" title="northward_wind_ten_velocity" colorScaleRange="-11.082492 14.658985" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PBLH" title="PBLH" colorScaleRange="-91.01296 2339.4211" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="SWDOWN" title="SWDOWN" colorScaleRange="-42.130974 884.7504" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="GLW" title="GLW" colorScaleRange="257.99142 476.3653" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="RAINC" title="RAINC" colorScaleRange="-14.844874 311.74237" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="T2" title="T2" colorScaleRange="278.16046 307.69357" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="WS10" title="WS10" colorScaleRange="-3.6304545 76.252205" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Uat250" title="eastward_wind_250" colorScaleRange="-22.086685 34.518696" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Vat250" title="northward_wind_250" colorScaleRange="-24.316463 32.511105" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="WSat250" title="upward_wind_velocity_250" colorScaleRange="-7.519507 164.77718" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Uat500" title="eastward_wind_500" colorScaleRange="-21.861849 22.269812" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Vat500" title="northward_wind_500" colorScaleRange="-11.979762 25.187227" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="WSat500" title="upward_wind_velocity_500" colorScaleRange="-4.1023903 93.478676" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Uat700" title="eastward_wind_700" colorScaleRange="-20.511393 21.924427" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Vat700" title="northward_wind_700" colorScaleRange="-15.449651 21.96222" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="WSat700" title="upward_wind_velocity_700" colorScaleRange="-3.3147433 77.705536" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Uat850" title="eastward_wind_850" colorScaleRange="-24.310608 21.559076" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Vat850" title="northward_wind_850" colorScaleRange="-13.261498 20.367975" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="WSat850" title="upward_wind_velocity_850" colorScaleRange="-4.0136833 85.46536" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PREC2" title="PREC2" colorScaleRange="-27.112152 569.3552" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="T2C" title="T2C" colorScaleRange="5.01046 34.543587" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PREC2B" title="PREC2B" colorScaleRange="-27.112152 569.3552" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PRECH" title="acc_prec" colorScaleRange="-0.6297901 13.225593" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PRECA3" title="prec_acu_three" colorScaleRange="-1.6614954 34.891403" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PRECA6" title="prec_acu_six" colorScaleRange="-2.4904075 52.298553" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_ten_velocity" title="wind_ten_velocity" colorScaleRange="-0.7676918 17.05277" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_250" title="wind_250" colorScaleRange="-2.0887523 45.771442" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_500" title="wind_500" colorScaleRange="-1.139553 25.966301" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_700" title="wind_700" colorScaleRange="-0.9207621 21.584871" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_850" title="wind_850" colorScaleRange="-1.114912 23.74038" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="QFX" title="Evaporation" colorScaleRange="-1.2790652E-5 2.686046E-4" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+         </variables>
+      </dataset>
+      <dataset id="wrf_dom2" location="/ServerData/OWGIS/WRF/Dom2_2017-08-02.nc" queryable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" title="wrf_dom22" updateInterval="-1">
+         <variables>
+            <variable id="Uat10" title="eastward_wind_ten_velocity" colorScaleRange="-14.017753 6.8798327" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Vat10" title="northward_wind_ten_velocity" colorScaleRange="-11.935312 13.894483" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PBLH" title="PBLH" colorScaleRange="-27.798046 1011.3557" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="SWDOWN" title="SWDOWN" colorScaleRange="-29.084698 655.56274" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="GLW" title="GLW" colorScaleRange="241.01999 475.99463" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="RAINC" title="RAINC" colorScaleRange="-11.127216 233.67154" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="T2" title="T2" colorScaleRange="277.2919 305.30148" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="WS10" title="WS10" colorScaleRange="-3.3261604 69.85721" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Uat250" title="eastward_wind_250" colorScaleRange="-17.23936 -3.3194861" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Vat250" title="northward_wind_250" colorScaleRange="-13.668191 7.080494" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="WSat250" title="upward_wind_velocity_250" colorScaleRange="14.077716 69.05806" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Uat500" title="eastward_wind_500" colorScaleRange="-12.288343 1.1134435" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Vat500" title="northward_wind_500" colorScaleRange="-5.927334 14.634144" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="WSat500" title="upward_wind_velocity_500" colorScaleRange="-1.0190682 60.32547" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Uat700" title="eastward_wind_700" colorScaleRange="-14.722354 7.8859653" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Vat700" title="northward_wind_700" colorScaleRange="-9.544338 21.01504" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="WSat700" title="upward_wind_velocity_700" colorScaleRange="-3.4335825 74.58498" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Uat850" title="eastward_wind_850" colorScaleRange="-18.23573 9.849495" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="Vat850" title="northward_wind_850" colorScaleRange="-14.409891 18.504683" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="WSat850" title="upward_wind_velocity_850" colorScaleRange="-3.7917733 83.36628" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PREC2" title="PREC2" colorScaleRange="-12.667126 266.00964" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="T2C" title="T2C" colorScaleRange="4.1419067 32.15149" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PREC2B" title="PREC2B" colorScaleRange="-12.667126 266.00964" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PRECH" title="acc_prec" colorScaleRange="-0.44659615 9.378519" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PRECA3" title="prec_acu_three" colorScaleRange="-1.1449895 24.044779" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PRECA6" title="prec_acu_six" colorScaleRange="-1.7643307 37.050945" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_ten_velocity" title="wind_ten_velocity" colorScaleRange="-0.7519991 16.12354" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_250" title="wind_250" colorScaleRange="3.9104767 19.182795" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_500" title="wind_500" colorScaleRange="-0.28307456 16.757074" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_700" title="wind_700" colorScaleRange="-0.953773 20.71805" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_850" title="wind_850" colorScaleRange="-1.0532703 23.1573" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="P" title="P" colorScaleRange="-0.14901787 13.485143" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="QVAPOR" title="QVAPOR" colorScaleRange="2.619334E-6 4.688565E-6" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="QCLOUD" title="cloud_liquid_water_mixing_ratio" colorScaleRange="0.0 1.0" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="RH" title="relative_humidity" colorScaleRange="100.0 101.0" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+         </variables>
+      </dataset>
+      <dataset id="" location="" queryable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" title="" updateInterval="-1">
+         <variables>
+            <variable id="hs" title="sea_surface_wave_significant_height" colorScaleRange="-0.09344694 1.9637976" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="t01" title="sea_surface_wind_wave_mean_period_from_variance_spectral_density_first_frequency_moment" colorScaleRange="1.6873317 7.398685" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="U" title="eastward_wind_ten_velocity" colorScaleRange="-50.0 50.0" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="V" title="northward_wind_ten_velocity" colorScaleRange="-50.0 50.0" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_ten_velocity" title="wind_ten_velocity" colorScaleRange="-50.0 50.0" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+         </variables>
+      </dataset>
+      <dataset id="" location="" queryable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" title="" updateInterval="-1">
+         <variables>
+            <variable id="hs" title="sea_surface_wave_significant_height" colorScaleRange="-0.1817992 4.097884" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="t01" title="sea_surface_wind_wave_mean_period_from_variance_spectral_density_first_frequency_moment" colorScaleRange="1.2903295 16.261719" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="U" title="eastward_wind_ten_velocity" colorScaleRange="-50.0 50.0" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="V" title="northward_wind_ten_velocity" colorScaleRange="-50.0 50.0" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_ten_velocity" title="wind_ten_velocity" colorScaleRange="-50.0 50.0" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+         </variables>
+      </dataset>
+      <dataset id="wwiii_pom" location="/ServerData/OWGIS/WWIII/pom/20170904/*.nc" queryable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" title="wwiii_pom" updateInterval="-1">
+         <variables>
+            <variable id="hs" title="sea_surface_wave_significant_height" colorScaleRange="-0.81260645 17.066431" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="t01" title="sea_surface_wind_wave_mean_period_from_variance_spectral_density_first_frequency_moment" colorScaleRange="1.3485672 15.951201" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="U" title="eastward_wind_ten_velocity" colorScaleRange="-50.0 50.0" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="V" title="northward_wind_ten_velocity" colorScaleRange="-50.0 50.0" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_ten_velocity" title="wind_ten_velocity" colorScaleRange="-50.0 50.0" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+         </variables>
+      </dataset>
+      <dataset id="wwiii_gom" location="/ServerData/OWGIS/WWIII/gom/20170904/*.nc" queryable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" title="wwiii_gom" updateInterval="-1">
+         <variables>
+            <variable id="hs" title="sea_surface_wave_significant_height" colorScaleRange="-0.09344694 1.9637976" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="t01" title="sea_surface_wind_wave_mean_period_from_variance_spectral_density_first_frequency_moment" colorScaleRange="1.6873317 7.398685" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="U" title="eastward_wind_ten_velocity" colorScaleRange="-12.487499 9.237499" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="V" title="northward_wind_ten_velocity" colorScaleRange="-8.769999 11.909999" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_ten_velocity" title="wind_ten_velocity" colorScaleRange="-0.549962 12.244903" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+         </variables>
+      </dataset>
+      <dataset id="wwiii_wo" location="/ServerData/OWGIS/WWIII/wo/20170904/*.nc" queryable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" title="wwiii_wo" updateInterval="-1">
+         <variables>
+            <variable id="hs" title="sea_surface_wave_significant_height" colorScaleRange="-0.81260645 17.066431" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="t01" title="sea_surface_wind_wave_mean_period_from_variance_spectral_density_first_frequency_moment" colorScaleRange="1.3485672 15.951201" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="U" title="eastward_wind_ten_velocity" colorScaleRange="-24.463493 26.286835" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="V" title="northward_wind_ten_velocity" colorScaleRange="-24.463501 26.286827" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="wind_ten_velocity" title="wind_ten_velocity" colorScaleRange="-1.6708932 35.6073" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+         </variables>
+      </dataset>
+      <dataset id="FALL3D_03m" location="/ServerData/OWGIS/FALL3D/p01h_03.nc" queryable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" title="FALL3D_03m" updateInterval="-1">
+         <variables>
+            <variable id="consentracion" title="consentracion" colorScaleRange="-50.0 50.0" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PM05" title="PM05" colorScaleRange="-4.7964815E-10 1.0072611E-8" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PM10" title="PM10" colorScaleRange="-1.7929453E-8 3.7651853E-7" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PM20" title="PM20" colorScaleRange="-1.08922166E-7 2.2873655E-6" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="FL50" title="FL50" colorScaleRange="-5.6336063E-5 0.0011830573" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="GRND" title="GRND" colorScaleRange="-3.2347356E-4 0.006792945" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="FL100" title="FL100" colorScaleRange="-4.0848026E-4 0.008578085" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="FL150" title="FL150" colorScaleRange="-5.16965E-4 0.010856265" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="FL200" title="FL200" colorScaleRange="-8.0559745E-5 0.0016917547" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="FL250" title="FL250" colorScaleRange="-1.2206921E-5 2.5634535E-4" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="FL300" title="FL300" colorScaleRange="-3.569979E-7 7.496956E-6" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="FL350" title="FL350" colorScaleRange="-2.957707E-8 6.2111843E-7" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="FL400" title="FL400" colorScaleRange="-1.1607131E-9 2.4374973E-8" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="consentration_GRND" title="consentration_GRND" colorScaleRange="-6.928697E-5 0.0014550264" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="consentration_50" title="consentration_50" colorScaleRange="-1.2317724E-7 2.586722E-6" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="consentration_100" title="consentration_100" colorScaleRange="-6.891939E-5 0.0014473072" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="consentration_150" title="consentration_150" colorScaleRange="-5.6762656E-5 0.0011920158" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="consentration_200" title="consentration_200" colorScaleRange="-5.194932E-5 0.0010909357" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="consentration_250" title="consentration_250" colorScaleRange="-2.1772625E-5 4.5722513E-4" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="consentration_300" title="consentration_300" colorScaleRange="-1.6485063E-5 3.461863E-4" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="consentration_350" title="consentration_350" colorScaleRange="-5.75723E-6 1.2090183E-4" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="consentration_400" title="consentration_400" colorScaleRange="-4.24661E-7 8.917881E-6" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+         </variables>
+      </dataset>
+      <dataset id="FALL3D_05m" location="/ServerData/OWGIS/FALL3D/p01h_05.nc" queryable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" title="FALL3D_05m" updateInterval="-1">
+         <variables>
+            <variable id="consentration_GRND" title="consentration_GRND" colorScaleRange="-9.3287344E-5 0.0019590342" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="consentration_50" title="consentration_50" colorScaleRange="-3.4023615E-9 7.144959E-8" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="consentration_100" title="consentration_100" colorScaleRange="-8.8884924E-5 0.0018665834" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="consentration_150" title="consentration_150" colorScaleRange="-7.764907E-5 0.0016306303" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="consentration_200" title="consentration_200" colorScaleRange="-2.8386188E-4 0.0059610996" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="consentration_250" title="consentration_250" colorScaleRange="-8.03746E-4 0.016878666" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="consentration_300" title="consentration_300" colorScaleRange="-3.7258412E-4 0.007824266" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="consentration_350" title="consentration_350" colorScaleRange="-7.759349E-6 1.6294631E-4" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="consentration_400" title="consentration_400" colorScaleRange="-1.4603567E-7 3.0667493E-6" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PM05" title="PM05" colorScaleRange="-3.668432E-12 7.703707E-11" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PM10" title="PM10" colorScaleRange="-1.2326802E-10 2.5886284E-9" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PM20" title="PM20" colorScaleRange="-7.233919E-10 1.519123E-8" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+         </variables>
+      </dataset>
+      <dataset id="FALL3D_10m" location="/ServerData/OWGIS/FALL3D/p01h_10.nc" queryable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" title="FALL3D_10m" updateInterval="-1">
+         <variables>
+            <variable id="consentration_GRND" title="consentration_GRND" colorScaleRange="-0.005709785 0.11990548" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="consentration_50" title="consentration_50" colorScaleRange="-5.3662004E-9 1.1269021E-7" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="consentration_100" title="consentration_100" colorScaleRange="-0.0053571905 0.112501" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="consentration_150" title="consentration_150" colorScaleRange="-0.0039444184 0.08283278" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="consentration_200" title="consentration_200" colorScaleRange="-0.0060546915 0.12714852" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="consentration_250" title="consentration_250" colorScaleRange="-0.006065228 0.12736979" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="consentration_300" title="consentration_300" colorScaleRange="-0.004490095 0.09429199" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="consentration_350" title="consentration_350" colorScaleRange="-0.0063081565 0.13247128" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="consentration_400" title="consentration_400" colorScaleRange="-4.444683E-4 0.009333834" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PM05" title="PM05" colorScaleRange="-8.2269844E-14 1.7276666E-12" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PM10" title="PM10" colorScaleRange="-3.7407243E-12 7.855521E-11" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+            <variable id="PM20" title="PM20" colorScaleRange="-3.236122E-11 6.795856E-10" palette="rainbow" scaling="linear" numColorBands="250" disabled="false"/>
+         </variables>
+      </dataset>
+   </datasets>
+   <threddsCatalog> </threddsCatalog>
+   <contact>
+      <name>Olmo S. Zavala Romero</name>
+      <organization>Grupo Interaccion Oceano Atmosfera</organization>
+      <telephone>56224048</telephone>
+      <email>olmozavala@atmosfera.unam.mx</email>
+   </contact>
+   <server>
+      <title>IOA ncWMS server</title>
+      <allowFeatureInfo>true</allowFeatureInfo>
+      <maxImageWidth>4096</maxImageWidth>
+      <maxImageHeight>4096</maxImageHeight>
+      <abstract> </abstract>
+      <keywords> </keywords>
+      <url> </url>
+      <adminpassword>\5CBby*c</adminpassword>
+      <allowglobalcapabilities>true</allowglobalcapabilities>
+   </server>
+   <cache enabled="true">
+      <elementLifetimeMinutes>1440</elementLifetimeMinutes>
+      <maxNumItemsInMemory>200</maxNumItemsInMemory>
+      <enableDiskStore>true</enableDiskStore>
+      <maxNumItemsOnDisk>2000</maxNumItemsOnDisk>
+   </cache>
+   <dynamicServices/>
+</config>

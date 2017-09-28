@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config>
+    <datasets>
+        <dataset id="gulf_vel" title="gulf_vel" location="/ServerData/ncWMS_Layers/velocity/*.nc" queryable="true" downloadable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" updateInterval="-1">
+            <variables>
+                <variable id="u:v-mag" title="Magnitude of sea water velocity" description="Magnitude of components: u-veloc. [02.2H] and v-veloc. [02.2H]" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.1045 2.212" scaling="linear"/>
+                <variable id="u" title="eastward_sea_water_velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-1.3390408 2.0848439" scaling="linear"/>
+                <variable id="v" title="northward_sea_water_velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-1.7142422 2.0783627" scaling="linear"/>
+                <variable id="u:v-group" title="sea_water_velocity" description="Vector fields for sea_water_velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.1045 2.212" scaling="linear"/>
+                <variable id="u:v-dir" title="Direction of sea water velocity" description="Direction of components: u-veloc. [02.2H] and v-veloc. [02.2H]" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-198.0 198.0" scaling="linear"/>
+            </variables>
+        </dataset>
+        <dataset id="world_temp" title="world_temp" location="/ServerData/ncWMS_Layers/one_date_mult_depths/*.nc" queryable="true" downloadable="false" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" updateInterval="-1">
+            <variables>
+                <variable id="area" title="Surface area" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-1.24475648E8 2.55107523E10" scaling="linear"/>
+                <variable id="pr" title="precipitation_flux" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-1.4965476E-5 3.14275E-4" scaling="linear"/>
+                <variable id="tas" title="air_temperature" palette="rainbow" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="200.0551 314.19363" scaling="linear"/>
+                <variable id="msk_rgn" title="Mask region" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-0.05 1.05" scaling="linear"/>
+                <variable id="ua" title="eastward_wind" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-15.485961 13.547655" scaling="linear"/>
+            </variables>
+        </dataset>
+        <dataset id="gulf_temp" title="gulf_temp" location="/ServerData/ncWMS_Layers/multiple_dates_multiple_depths/*.nc" queryable="true" downloadable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" updateInterval="-1">
+            <variables>
+                <variable id="temperature" title="sea_water_potential_temperature" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="14.399689 27.824318" scaling="linear"/>
+            </variables>
+        </dataset>
+        <dataset id="global_uv_2015" title="global_uv_2015" location="/ServerData/ncWMS_Layers/global/hycom_glb_911_2015010100_t000_uv3z.nc" queryable="true" downloadable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" updateInterval="-1">
+            <variables>
+                <variable id="water_u" title="eastward_sea_water_velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-1.58905 1.80005" scaling="linear"/>
+                <variable id="water_u:water_v-mag" title="Magnitude of sea water velocity" description="Magnitude of components: Eastward Water Velocity and Northward Water Velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.1231 2.585" scaling="linear"/>
+                <variable id="water_u:water_v-group" title="sea_water_velocity" description="Vector fields for sea_water_velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.1231 2.585" scaling="linear"/>
+                <variable id="water_v" title="northward_sea_water_velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-2.38415 1.4031501" scaling="linear"/>
+                <variable id="water_u:water_v-dir" title="Direction of sea water velocity" description="Direction of components: Eastward Water Velocity and Northward Water Velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-197.8 198.0" scaling="linear"/>
+            </variables>
+        </dataset>
+        <dataset id="global_ts_2015" title="global_ts_2015" location="/ServerData/ncWMS_Layers/global/hycom_glb_911_2015010100_t000_ts3z.nc" queryable="true" downloadable="false" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" updateInterval="-1">
+            <variables>
+                <variable id="salinity" title="sea_water_salinity" palette="rainbow" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="1.717749 42.379253" scaling="linear"/>
+                <variable id="water_temp" title="sea_water_temperature" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-3.6319513 33.10695" scaling="linear"/>
+            </variables>
+        </dataset>
+        <dataset id="hycom_forecast_ts" title="hycom_forecast_ts" location="/ServerData/GlobalHycomData/*ts3z.nc*" queryable="true" downloadable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" updateInterval="60">
+            <variables>
+                <variable id="salinity" title="sea_water_salinity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="1.7568992 41.9311" scaling="linear"/>
+                <variable id="water_temp" title="sea_water_temperature" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-3.731451 36.31845" scaling="linear"/>
+            </variables>
+        </dataset>
+        <dataset id="hycom_forecast_ssh" title="hycom_forecast_ssh" location="/ServerData/GlobalHycomData/*ssh.nc*" queryable="true" downloadable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" updateInterval="60">
+            <variables>
+                <variable id="surf_el" title="sea_surface_elevation" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-2.2023 1.6763002" scaling="linear"/>
+            </variables>
+        </dataset>
+        <dataset id="hycom_forecast_uv" title="hycom_forecast_uv" location="/ServerData/GlobalHycomData/*uv3z.nc*" queryable="true" downloadable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" updateInterval="60">
+            <variables>
+                <variable id="water_u" title="eastward_sea_water_velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-1.8073001 1.9613001" scaling="linear"/>
+                <variable id="water_u:water_v-mag" title="Magnitude of sea water velocity" description="Magnitude of components: Eastward Water Velocity and Northward Water Velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.1241 2.606" scaling="linear"/>
+                <variable id="water_u:water_v-group" title="sea_water_velocity" description="Vector fields for sea_water_velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.1241 2.606" scaling="linear"/>
+                <variable id="water_v" title="northward_sea_water_velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-1.5677501 2.25475" scaling="linear"/>
+                <variable id="water_u:water_v-dir" title="Direction of sea water velocity" description="Direction of components: Eastward Water Velocity and Northward Water Velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-197.9 198.0" scaling="linear"/>
+            </variables>
+        </dataset>
+        <dataset id="gfs_forecast" title="gfs_forecast" location="/ServerData/OWGIS/GFS/*.nc" queryable="true" downloadable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" updateInterval="60">
+            <variables>
+                <variable id="sun_dur" title="Sunshine duration" description="Sunshine duration" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-1074.0 22680.0" scaling="linear"/>
+                <variable id="humidity_isobar" title="Humidity Isobaric" description="Humidity Isobaric" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-3.315E-4 0.009162" scaling="linear"/>
+                <variable id="abs_vort" title="Absolute Vorticity" description="Absolute Vorticity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-2.544E-4 1.966E-4" scaling="linear"/>
+                <variable id="temp_surf" title="Temp Surface" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="212.74501 323.955" scaling="linear"/>
+                <variable id="humidity_twom" title="Humidity at 2 mts" description="Humidity at 2 mts" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="1.299 104.7" scaling="linear"/>
+                <variable id="pres_msl" title="MSL Pressure" description="MSL Pressure" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="94690.0 105000.0" scaling="linear"/>
+                <variable id="tot_ice_cov" title="Total Ice Cover" description="Total Ice Cover" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.0395 1.049" scaling="linear"/>
+                <variable id="v_isobar:u_isobar-dir" title="Direction of wind iso" description="Direction of components:
+wind_iso and
+wind_iso" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-198.0 197.9" scaling="linear"/>
+                <variable id="temp_abvgrd" title="Temperature_Above Ground" description="Temperature_Above Ground" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="210.3 314.9" scaling="linear"/>
+                <variable id="plan_height" title="Planetary Height" description="Planetary Height" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-124.8 3002.0" scaling="linear"/>
+                <variable id="tot_ozone" title="Total ozone" description="Total ozone" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="137.4 456.5" scaling="linear"/>
+                <variable id="v_abvgrd:u_abvgrd-mag" title="Magnitude of wind abvgrd" description="Magnitude of components:
+wind_abvgrd and
+wind_abvgrd" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-1.244 26.39" scaling="linear"/>
+                <variable id="temp_isobar" title="Temperature Isobaric" description="Temperature Isobaric" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="237.9 275.4" scaling="linear"/>
+                <variable id="v_isobar:u_isobar-mag" title="Magnitude of wind iso" description="Magnitude of components:
+wind_iso and
+wind_iso" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-3.07 66.13" scaling="linear"/>
+                <variable id="geo_height_isobar" title="Geopotencial Height" description="Geopotencial Height" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="44880.0 47950.0" scaling="linear"/>
+                <variable id="surf_idx" title="Surface lifted index" description="Surface lifted index" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-11.8 41.11" scaling="linear"/>
+                <variable id="v_isobar" title="wind_iso" description="wind_iso" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-40.32 67.84" scaling="linear"/>
+                <variable id="v_abvgrd:u_abvgrd-dir" title="Direction of wind abvgrd" description="Direction of components:
+wind_abvgrd and
+wind_abvgrd" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-198.0 197.9" scaling="linear"/>
+                <variable id="prec_water" title="Prec_water" description="Prec_water" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-3.349 72.55" scaling="linear"/>
+                <variable id="conv_en" title="Convective Potencial Energy" description="Convective Potencial Energy" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-200.5 4233.0" scaling="linear"/>
+                <variable id="pres_grd" title="Ground Pressure" description="Ground Pressure" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="46940.0 106300.0" scaling="linear"/>
+                <variable id="v_abvgrd" title="wind_abvgrd" description="wind_abvgrd" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-21.2 24.84" scaling="linear"/>
+                <variable id="u_abvgrd" title="wind_abvgrd" description="wind_abvgrd" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-23.11 22.1" scaling="linear"/>
+                <variable id="u_isobar" title="wind_iso" description="wind_iso" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-40.83 41.26" scaling="linear"/>
+                <variable id="v_isobar:u_isobar-group" title="wind_iso" description="Vector fields for wind_iso" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-3.07 66.13" scaling="linear"/>
+                <variable id="v_abvgrd:u_abvgrd-group" title="wind_abvgrd" description="Vector fields for wind_abvgrd" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-1.244 26.39" scaling="linear"/>
+            </variables>
+        </dataset>
+        <dataset id="wrf_hist" title="wrf_hist" location="/ServerData/WRF_OWGIS_HIST/Dom2_2016-04-30.nc" queryable="true" downloadable="false" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" updateInterval="60">
+            <variables>
+                <variable id="Vat10" title="northward_wind_ten_velocity" palette="rainbow" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-12.908664 13.180706" scaling="linear"/>
+                <variable id="Vat500" title="northward_wind_500" palette="rainbow" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-6.100384 8.603329" scaling="linear"/>
+                <variable id="Vat700" title="northward_wind_700" palette="rainbow" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-8.797168 12.707823" scaling="linear"/>
+                <variable id="WSat850" title="upward_wind_velocity_850" palette="rainbow" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-2.2908595 55.664516" scaling="linear"/>
+                <variable id="Uat250:Vat250-mag" title="Magnitude of wind 250" description="Magnitude of components: U at 250 hPA and V at 250 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.5684 41.44" scaling="linear"/>
+                <variable id="PRECA6" title="prec_acu_six" palette="rainbow" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-0.001089974 0.022889573" scaling="linear"/>
+                <variable id="Uat700:Vat700-dir" title="Direction of wind 700" description="Direction of components: U at 700 hPA and V at 700 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-198.0 198.0" scaling="linear"/>
+                <variable id="WS10" title="WS10" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-3.021757 65.2131" scaling="linear"/>
+                <variable id="Uat850" title="eastward_wind_850" palette="rainbow" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-14.61167 14.216089" scaling="linear"/>
+                <variable id="Uat700:Vat700-mag" title="Magnitude of wind 700" description="Magnitude of components: U at 700 hPA and V at 700 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.6378 14.06" scaling="linear"/>
+                <variable id="PRECA3" title="prec_acu_three" palette="rainbow" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-0.32717252 6.8706226" scaling="linear"/>
+                <variable id="PREC2B" title="PREC2B" palette="rainbow" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-2.0415847 42.87328" scaling="linear"/>
+                <variable id="Uat10:Vat10-dir" title="Direction of wind ten velocity" description="Direction of components: U at 10 M and V at 10 M" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-198.0 198.0" scaling="linear"/>
+                <variable id="Uat250:Vat250-dir" title="Direction of wind 250" description="Direction of components: U at 250 hPA and V at 250 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="64.2 145.3" scaling="linear"/>
+                <variable id="Uat10:Vat10-mag" title="Magnitude of wind ten velocity" description="Magnitude of components: U at 10 M and V at 10 M" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.5921 14.64" scaling="linear"/>
+                <variable id="Uat500:Vat500-dir" title="Direction of wind 500" description="Direction of components: U at 500 hPA and V at 500 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-198.0 198.0" scaling="linear"/>
+                <variable id="Uat250:Vat250-group" title="wind_250" description="Vector fields for wind_250" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.5684 41.44" scaling="linear"/>
+                <variable id="Uat700:Vat700-group" title="wind_700" description="Vector fields for wind_700" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.6378 14.06" scaling="linear"/>
+                <variable id="Uat500:Vat500-mag" title="Magnitude of wind 500" description="Magnitude of components: U at 500 hPA and V at 500 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.8231 21.73" scaling="linear"/>
+                <variable id="Uat250" title="eastward_wind_250" palette="rainbow" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-1.351541 36.706966" scaling="linear"/>
+                <variable id="Uat850:Vat850-group" title="wind_850" description="Vector fields for wind_850" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.7735 16.95" scaling="linear"/>
+                <variable id="PREC2" title="PREC2" palette="rainbow" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-2.0415847 42.87328" scaling="linear"/>
+                <variable id="T2C" title="T2C" palette="rainbow" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="10.614668 41.22557" scaling="linear"/>
+                <variable id="WSat700" title="upward_wind_velocity_700" palette="rainbow" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-2.5673227 58.097275" scaling="linear"/>
+                <variable id="PRECH" title="acc_prec" palette="rainbow" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-0.20565186 4.318689" scaling="linear"/>
+                <variable id="Vat850" title="northward_wind_850" palette="rainbow" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-9.889979 11.372108" scaling="linear"/>
+                <variable id="Uat500:Vat500-group" title="wind_500" description="Vector fields for wind_500" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.8231 21.73" scaling="linear"/>
+                <variable id="SSTC" title="SSTC" palette="rainbow" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="9.158496 40.77705" scaling="linear"/>
+                <variable id="Vat250" title="northward_wind_250" palette="rainbow" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="0.9935497 11.468801" scaling="linear"/>
+                <variable id="WSat500" title="upward_wind_velocity_500" palette="rainbow" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-4.1855955 98.78894" scaling="linear"/>
+                <variable id="Uat10:Vat10-group" title="wind_ten_velocity" description="Vector fields for wind_ten_velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.5921 14.64" scaling="linear"/>
+                <variable id="WSat250" title="upward_wind_velocity_250" palette="rainbow" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="5.8734546 134.15048" scaling="linear"/>
+                <variable id="Uat500" title="eastward_wind_500" palette="rainbow" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-6.416052 26.953135" scaling="linear"/>
+                <variable id="Uat700" title="eastward_wind_700" palette="rainbow" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-8.675835 16.323662" scaling="linear"/>
+                <variable id="Uat850:Vat850-mag" title="Magnitude of wind 850" description="Magnitude of components: U at 850 hPA and V at 850 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.7735 16.95" scaling="linear"/>
+                <variable id="Uat10" title="eastward_wind_ten_velocity" palette="rainbow" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-11.02591 13.305842" scaling="linear"/>
+                <variable id="Uat850:Vat850-dir" title="Direction of wind 850" description="Direction of components: U at 850 hPA and V at 850 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-198.0 198.0" scaling="linear"/>
+            </variables>
+        </dataset>
+        <dataset id="wwiii_pom" title="wwiii_pom" location="/ServerData/OWGIS/WWIII/pom/p*.nc" queryable="true" downloadable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" updateInterval="60">
+            <variables>
+                <variable id="t01" title="sea_surface_wind_wave_mean_period_from_variance_spectral_density_first_frequency_moment" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="1.3485672 15.951201" scaling="linear"/>
+                <variable id="U" title="eastward_wind_ten_velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-50.0 50.0" scaling="linear"/>
+                <variable id="V" title="northward_wind_ten_velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-50.0 50.0" scaling="linear"/>
+                <variable id="hs" title="sea_surface_wave_significant_height" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-0.81260645 17.066431" scaling="linear"/>
+                <variable id="U:V-mag" title="Magnitude of wind ten velocity" description="Magnitude of components: U and V" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.4241 11.41" scaling="linear"/>
+                <variable id="U:V-group" title="wind_ten_velocity" description="Vector fields for wind_ten_velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.4241 11.41" scaling="linear"/>
+                <variable id="U:V-dir" title="Direction of wind ten velocity" description="Direction of components: U and V" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-197.9 198.0" scaling="linear"/>
+            </variables>
+        </dataset>
+        <dataset id="wwiii_gom" title="wwiii_gom" location="/ServerData/OWGIS/WWIII/gom/*.nc" queryable="true" downloadable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" updateInterval="60">
+            <variables>
+                <variable id="t01" title="sea_surface_wind_wave_mean_period_from_variance_spectral_density_first_frequency_moment" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="1.6873317 7.398685" scaling="linear"/>
+                <variable id="U" title="eastward_wind_ten_velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-12.487499 9.237499" scaling="linear"/>
+                <variable id="V" title="northward_wind_ten_velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-8.769999 11.909999" scaling="linear"/>
+                <variable id="hs" title="sea_surface_wave_significant_height" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-0.09344694 1.9637976" scaling="linear"/>
+                <variable id="U:V-mag" title="Magnitude of wind ten velocity" description="Magnitude of components: U and V" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.3989 9.073" scaling="linear"/>
+                <variable id="U:V-group" title="wind_ten_velocity" description="Vector fields for wind_ten_velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.3989 9.073" scaling="linear"/>
+                <variable id="U:V-dir" title="Direction of wind ten velocity" description="Direction of components: U and V" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-197.6 198.0" scaling="linear"/>
+            </variables>
+        </dataset>
+        <dataset id="wwiii_wo" title="wwiii_wo" location="/ServerData/OWGIS/WWIII/wo/*.nc" queryable="true" downloadable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" updateInterval="60">
+            <variables>
+                <variable id="t01" title="sea_surface_wind_wave_mean_period_from_variance_spectral_density_first_frequency_moment" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="1.3485672 15.951201" scaling="linear"/>
+                <variable id="U" title="eastward_wind_ten_velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-24.463493 26.286835" scaling="linear"/>
+                <variable id="V" title="northward_wind_ten_velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-24.463501 26.286827" scaling="linear"/>
+                <variable id="hs" title="sea_surface_wave_significant_height" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-0.81260645 17.066431" scaling="linear"/>
+                <variable id="U:V-mag" title="Magnitude of wind ten velocity" description="Magnitude of components: U and V" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-1.397 29.85" scaling="linear"/>
+                <variable id="U:V-group" title="wind_ten_velocity" description="Vector fields for wind_ten_velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-1.397 29.85" scaling="linear"/>
+                <variable id="U:V-dir" title="Direction of wind ten velocity" description="Direction of components: U and V" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-150.0 180.0" scaling="linear"/>
+            </variables>
+        </dataset>
+        <dataset id="adcir_gom" title="adcirc_gom" location="/ServerData/OWGIS/ADCIRC/gom-owgis.nc" queryable="true" downloadable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" updateInterval="60">
+            <variables>
+                <variable id="zeta" title="water surface elevation above geoid" description="water surface elevation above geoid" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.5409 0.3243" scaling="linear"/>
+                <variable id="depth" title="distance  below geoid" description="distance  below geoid" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-265.9 5603.0" scaling="linear"/>
+            </variables>
+        </dataset>
+        <dataset id="adcir_pom" title="adcir_pom" location="/ServerData/OWGIS/ADCIRC/pom-owgis.nc" queryable="true" downloadable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" updateInterval="60">
+            <variables>
+                <variable id="zeta" title="water surface elevation above geoid" description="water surface elevation above geoid" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-1.037 2.277" scaling="linear"/>
+                <variable id="depth" title="distance  below geoid" description="distance  below geoid" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-272.1 5714.0" scaling="linear"/>
+            </variables>
+        </dataset>
+        <dataset id="wrf-chem" title="wrf-chem" location="/ServerData/OWGIS/WRF-CHEM/Dom*.nc" queryable="true" downloadable="true" dataReaderClass="" copyrightStatement="" moreInfo="/ServerData/OWGIS/WRF/Dom1_2017-08-14.nc" disabled="false" updateInterval="-1">
+            <variables>
+                <variable id="Vat10" title="V at 10 M" description="V at 10 M" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-16.82 14.06" scaling="linear"/>
+                <variable id="Vat500" title="northward_wind_500" description="V at 500 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-14.25 18.13" scaling="linear"/>
+                <variable id="Vat700" title="northward_wind_700" description="V at 700 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-23.92 16.44" scaling="linear"/>
+                <variable id="WSat850" title="upward_wind_velocity_850" description="Wind Speed at 850Hp/Velocidad del viento a 850Hp" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-5.396 116.4" scaling="linear"/>
+                <variable id="PBLH" title="PBLH" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-169.0 3765.0" scaling="linear"/>
+                <variable id="Uat250:Vat250-mag" title="Magnitude of wind 250" description="Magnitude of components: U at 250 hPA and V at 250 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-1.6 34.99" scaling="linear"/>
+                <variable id="Uat700:Vat700-dir" title="Direction of wind 700" description="Direction of components: U at 700 hPA and V at 700 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-197.8 197.7" scaling="linear"/>
+                <variable id="WS10" title="WS10" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-4.998 105.1" scaling="linear"/>
+                <variable id="Uat850" title="eastward_wind_850" description="U at 850 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-17.4 18.58" scaling="linear"/>
+                <variable id="Uat700:Vat700-mag" title="Magnitude of wind 700" description="Magnitude of components: U at 700 hPA and V at 700 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-1.095 23.92" scaling="linear"/>
+                <variable id="Uat10:Vat10-dir" title="Direction of wind ten velocity" description="Direction of components: U at 10 M and V at 10 M" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-197.9 198.0" scaling="linear"/>
+                <variable id="Uat250:Vat250-dir" title="Direction of wind 250" description="Direction of components: U at 250 hPA and V at 250 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-197.9 198.0" scaling="linear"/>
+                <variable id="so2" title="so2" description="SO2 mixing ratio" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-5.809E-6 1.548E-4" scaling="linear"/>
+                <variable id="Uat10:Vat10-mag" title="Magnitude of wind ten velocity" description="Magnitude of components: U at 10 M and V at 10 M" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.9006 21.76" scaling="linear"/>
+                <variable id="Uat500:Vat500-dir" title="Direction of wind 500" description="Direction of components: U at 500 hPA and V at 500 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-197.9 197.9" scaling="linear"/>
+                <variable id="Uat250:Vat250-group" title="wind_250" description="Vector fields for wind_250" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-1.6 34.99" scaling="linear"/>
+                <variable id="Uat700:Vat700-group" title="wind_700" description="Vector fields for wind_700" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-1.095 23.92" scaling="linear"/>
+                <variable id="Uat500:Vat500-mag" title="Magnitude of wind 500" description="Magnitude of components: U at 500 hPA and V at 500 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.9464 20.21" scaling="linear"/>
+                <variable id="Uat250" title="eastward_wind_250" description="U at 250 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-22.43 29.43" scaling="linear"/>
+                <variable id="T2" title="T2" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="281.6 313.5" scaling="linear"/>
+                <variable id="Uat850:Vat850-group" title="wind_850" description="Vector fields for wind_850" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-1.499 32.32" scaling="linear"/>
+                <variable id="WSat700" title="upward_wind_velocity_700" description="Wind Speed at 700Hp/Velocidad del viento a 700Hp" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-3.941 86.1" scaling="linear"/>
+                <variable id="T2C" title="T2C" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="8.424 40.33" scaling="linear"/>
+                <variable id="o3" title="o3" description="O3 mixing ratio" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="0.02231 0.183" scaling="linear"/>
+                <variable id="Vat850" title="northward_wind_850" description="V at 850 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-31.9 16.64" scaling="linear"/>
+                <variable id="Uat500:Vat500-group" title="wind_500" description="Vector fields for wind_500" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.9464 20.21" scaling="linear"/>
+                <variable id="Vat250" title="northward_wind_250" description="V at 250 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-22.9 22.6" scaling="linear"/>
+                <variable id="WSat500" title="upward_wind_velocity_500" description="Wind Speed at 500Hp/Velocidad del viento a 500Hp" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-3.407 72.77" scaling="linear"/>
+                <variable id="co" title="co" description="CO mixing ratio" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="0.07255 0.08804" scaling="linear"/>
+                <variable id="Uat10:Vat10-group" title="wind_ten_velocity" description="Vector fields for wind_ten_velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.9006 21.76" scaling="linear"/>
+                <variable id="WSat250" title="upward_wind_velocity_250" description="Wind Speed at 250Hp/Velocidad del viento a 250Hp" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-5.759 126.0" scaling="linear"/>
+                <variable id="Uat500" title="eastward_wind_500" description="U at 500 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-18.63 16.81" scaling="linear"/>
+                <variable id="NOX" title="NOX" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-2.139E-4 0.004642" scaling="linear"/>
+                <variable id="RH" title="relative_humidity" description="relative_humidity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="8.947 51.08" scaling="linear"/>
+                <variable id="Uat700" title="eastward_wind_700" description="U at 700 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-17.42 14.92" scaling="linear"/>
+                <variable id="Uat850:Vat850-mag" title="Magnitude of wind 850" description="Magnitude of components: U at 850 hPA and V at 850 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-1.499 32.32" scaling="linear"/>
+                <variable id="PM10" title="PM10" description="pm10 dry mass" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.1009 2.823" scaling="linear"/>
+                <variable id="Uat10" title="U at 10 M" description="U at 10 M" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-16.46 21.38" scaling="linear"/>
+                <variable id="Uat850:Vat850-dir" title="Direction of wind 850" description="Direction of components: U at 850 hPA and V at 850 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-198.0 198.0" scaling="linear"/>
+            </variables>
+        </dataset>
+        <dataset id="wrf_Dom2" title="wrf_Dom2" location="/ServerData/OWGIS/WRF/Dom2*.nc" queryable="true" downloadable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" updateInterval="60">
+            <variables>
+                <variable id="Vat10" title="northward_wind_ten_velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-11.935312 13.894483" scaling="linear"/>
+                <variable id="Vat500" title="northward_wind_500" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-5.927334 14.634144" scaling="linear"/>
+                <variable id="Vat700" title="northward_wind_700" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-9.544338 21.01504" scaling="linear"/>
+                <variable id="WSat850" title="upward_wind_velocity_850" description="Wind Speed at 850Hp/Velocidad del viento a 850Hp" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-5.557 117.8" scaling="linear"/>
+                <variable id="SWDOWN" title="SWDOWN" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-29.084698 655.56274" scaling="linear"/>
+                <variable id="PBLH" title="PBLH" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-27.798046 1011.3557" scaling="linear"/>
+                <variable id="RAINC" title="RAINC" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-11.127216 233.67154" scaling="linear"/>
+                <variable id="P" title="P" description="perturbation pressure" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-20.81 16.01" scaling="linear"/>
+                <variable id="Uat250:Vat250-mag" title="Magnitude of wind 250" description="Magnitude of components: U at 250 hPA and V at 250 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.4749 11.92" scaling="linear"/>
+                <variable id="Uat700:Vat700-dir" title="Direction of wind 700" description="Direction of components: U at 700 hPA and V at 700 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-198.0 197.9" scaling="linear"/>
+                <variable id="PRECA6" title="Precipitation Accu 6hr" description="Precipitation Accu 6hr" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-3.782 79.42" scaling="linear"/>
+                <variable id="GLW" title="GLW" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="241.01999 475.99463" scaling="linear"/>
+                <variable id="WS10" title="WS10" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-3.3261604 69.85721" scaling="linear"/>
+                <variable id="Uat850" title="eastward_wind_850" description="U at 850 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-12.08 17.1" scaling="linear"/>
+                <variable id="Uat700:Vat700-mag" title="Magnitude of wind 700" description="Magnitude of components: U at 700 hPA and V at 700 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.6703 15.04" scaling="linear"/>
+                <variable id="PRECA3" title="Precipitation Accu 3hr" description="Precipitation Accu 3hr" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-2.042 42.89" scaling="linear"/>
+                <variable id="Uat10:Vat10-dir" title="Direction of wind ten velocity" description="Direction of components: U at 10 M and V at 10 M" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-198.0 197.9" scaling="linear"/>
+                <variable id="Uat250:Vat250-dir" title="Direction of wind 250" description="Direction of components: U at 250 hPA and V at 250 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-198.0 198.0" scaling="linear"/>
+                <variable id="PREC2B" title="PREC2B" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-35.37 742.7" scaling="linear"/>
+                <variable id="Uat10:Vat10-mag" title="Magnitude of wind ten velocity" description="Magnitude of components: U at 10 M and V at 10 M" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.4409 10.51" scaling="linear"/>
+                <variable id="Uat500:Vat500-dir" title="Direction of wind 500" description="Direction of components: U at 500 hPA and V at 500 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-180.4 192.9" scaling="linear"/>
+                <variable id="Uat250:Vat250-group" title="wind_250" description="Vector fields for wind_250" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.4749 11.92" scaling="linear"/>
+                <variable id="Uat700:Vat700-group" title="wind_700" description="Vector fields for wind_700" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.6703 15.04" scaling="linear"/>
+                <variable id="Uat500:Vat500-mag" title="Magnitude of wind 500" description="Magnitude of components: U at 500 hPA and V at 500 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.09927 14.53" scaling="linear"/>
+                <variable id="Uat250" title="eastward_wind_250" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-17.23936 -3.3194861" scaling="linear"/>
+                <variable id="T2" title="T2" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="277.2919 305.30148" scaling="linear"/>
+                <variable id="Uat850:Vat850-group" title="wind_850" description="Vector fields for wind_850" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-1.544 32.71" scaling="linear"/>
+                <variable id="PREC2" title="PREC2" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-35.37 742.7" scaling="linear"/>
+                <variable id="QFX" title="Evaporation" description="Evaporation" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-2.153E-5 3.437E-4" scaling="linear"/>
+                <variable id="WSat700" title="upward_wind_velocity_700" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-3.4335825 74.58498" scaling="linear"/>
+                <variable id="T2C" title="T2C" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="8.291 39.61" scaling="linear"/>
+                <variable id="PRECH" title="Hourly precipitation" description="Hourly precipitation" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.5613 11.79" scaling="linear"/>
+                <variable id="Vat850" title="northward_wind_850" description="V at 850 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-33.1 9.847" scaling="linear"/>
+                <variable id="Uat500:Vat500-group" title="wind_500" description="Vector fields for wind_500" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.09927 14.53" scaling="linear"/>
+                <variable id="QCLOUD" title="cloud_liquid_water_mixing_ratio" description="cloud_liquid_water_mixing_ratio" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-1.089E-9 2.287E-8" scaling="linear"/>
+                <variable id="Vat250" title="northward_wind_250" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-13.668191 7.080494" scaling="linear"/>
+                <variable id="WSat500" title="upward_wind_velocity_500" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-1.0190682 60.32547" scaling="linear"/>
+                <variable id="Uat10:Vat10-group" title="wind_ten_velocity" description="Vector fields for wind_ten_velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.4409 10.51" scaling="linear"/>
+                <variable id="WSat250" title="upward_wind_velocity_250" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="14.077716 69.05806" scaling="linear"/>
+                <variable id="Uat500" title="eastward_wind_500" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-12.288343 1.1134435" scaling="linear"/>
+                <variable id="RH" title="relative_humidity" description="relative_humidity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="17.11 50.01" scaling="linear"/>
+                <variable id="Uat700" title="eastward_wind_700" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-14.722354 7.8859653" scaling="linear"/>
+                <variable id="Uat850:Vat850-mag" title="Magnitude of wind 850" description="Magnitude of components:
+U at 850 hPA and
+V at 850 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-1.544 32.71" scaling="linear"/>
+                <variable id="Uat10" title="eastward_wind_ten_velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" disabled="false" colorScaleRange="-14.017753 6.8798327" scaling="linear"/>
+                <variable id="Uat850:Vat850-dir" title="Direction of wind 850" description="Direction of components:
+U at 850 hPA and
+V at 850 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-198.0 198.0" scaling="linear"/>
+            </variables>
+        </dataset>
+        <dataset id="wrf_Dom1" title="wrf_Dom1" location="/ServerData/OWGIS/WRF/Dom1*.nc" queryable="true" downloadable="true" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" updateInterval="60">
+            <variables>
+                <variable id="Vat10" title="V at 10 M" description="V at 10 M" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-47.55 44.87" scaling="linear"/>
+                <variable id="Vat500" title="northward_wind_500" description="V at 500 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-23.61 16.83" scaling="linear"/>
+                <variable id="Vat700" title="northward_wind_700" description="V at 700 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-21.45 13.11" scaling="linear"/>
+                <variable id="WSat850" title="upward_wind_velocity_850" description="Wind Speed at 850Hp/Velocidad del viento a 850Hp" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-5.697 122.2" scaling="linear"/>
+                <variable id="SWDOWN" title="SWDOWN" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-28.11 590.3" scaling="linear"/>
+                <variable id="PBLH" title="PBLH" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-165.1 3884.0" scaling="linear"/>
+                <variable id="RAINC" title="RAINC" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-23.05 484.1" scaling="linear"/>
+                <variable id="P" title="P" description="perturbation pressure" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-11.49 17.28" scaling="linear"/>
+                <variable id="Uat250:Vat250-mag" title="Magnitude of wind 250" description="Magnitude of components:
+U at 250 hPA and
+V at 250 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-2.091 45.96" scaling="linear"/>
+                <variable id="PRECA6" title="Precipitation Accu 6hr" description="Precipitation Accu 6hr" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-21.14 443.9" scaling="linear"/>
+                <variable id="Uat700:Vat700-dir" title="Direction of wind 700" description="Direction of components:
+U at 700 hPA and
+V at 700 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-198.0 198.0" scaling="linear"/>
+                <variable id="GLW" title="GLW" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="214.3 478.0" scaling="linear"/>
+                <variable id="WS10" title="WS10" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-5.803 121.9" scaling="linear"/>
+                <variable id="Uat850" title="eastward_wind_850" description="U at 850 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-20.46 32.64" scaling="linear"/>
+                <variable id="Uat700:Vat700-mag" title="Magnitude of wind 700" description="Magnitude of components:
+U at 700 hPA and
+V at 700 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-1.117 24.92" scaling="linear"/>
+                <variable id="PRECA3" title="Precipitation Accu 3hr" description="Precipitation Accu 3hr" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-7.54 158.3" scaling="linear"/>
+                <variable id="Uat10:Vat10-dir" title="Direction of wind ten velocity" description="Direction of components: U at 10 M and V at 10 M" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-198.0 198.0" scaling="linear"/>
+                <variable id="PREC2B" title="PREC2B" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-35.39 743.1" scaling="linear"/>
+                <variable id="Uat250:Vat250-dir" title="Direction of wind 250" description="Direction of components:
+U at 250 hPA and
+V at 250 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-198.0 197.9" scaling="linear"/>
+                <variable id="Uat10:Vat10-mag" title="Magnitude of wind ten velocity" description="Magnitude of components: U at 10 M and V at 10 M" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-2.285 48.51" scaling="linear"/>
+                <variable id="Uat500:Vat500-dir" title="Direction of wind 500" description="Direction of components:
+U at 500 hPA and
+V at 500 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-198.0 197.9" scaling="linear"/>
+                <variable id="Uat250:Vat250-group" title="wind_250" description="Vector fields for wind_250" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-2.091 45.96" scaling="linear"/>
+                <variable id="Uat700:Vat700-group" title="wind_700" description="Vector fields for wind_700" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-1.117 24.92" scaling="linear"/>
+                <variable id="Uat500:Vat500-mag" title="Magnitude of wind 500" description="Magnitude of components:
+U at 500 hPA and
+V at 500 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-1.455 33.09" scaling="linear"/>
+                <variable id="Uat250" title="eastward_wind_250" description="U at 250 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-31.11 47.29" scaling="linear"/>
+                <variable id="T2" title="T2" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="276.3 313.5" scaling="linear"/>
+                <variable id="Uat850:Vat850-group" title="wind_850" description="Vector fields for wind_850" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-1.582 33.95" scaling="linear"/>
+                <variable id="PREC2" title="PREC2" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-35.39 743.1" scaling="linear"/>
+                <variable id="QFX" title="Evaporation" description="Evaporation" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-2.985E-5 5.369E-4" scaling="linear"/>
+                <variable id="WSat700" title="upward_wind_velocity_700" description="Wind Speed at 700Hp/Velocidad del viento a 700Hp" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-4.02 89.71" scaling="linear"/>
+                <variable id="T2C" title="T2C" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="3.2 40.32" scaling="linear"/>
+                <variable id="PRECH" title="Hourly precipitation" description="Hourly precipitation" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-2.785 58.49" scaling="linear"/>
+                <variable id="Vat850" title="northward_wind_850" description="V at 850 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-30.33 23.74" scaling="linear"/>
+                <variable id="QCLOUD" title="cloud_liquid_water_mixing_ratio" description="cloud_liquid_water_mixing_ratio" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-2.542E-8 5.338E-7" scaling="linear"/>
+                <variable id="Uat500:Vat500-group" title="wind_500" description="Vector fields for wind_500" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-1.455 33.09" scaling="linear"/>
+                <variable id="Vat250" title="northward_wind_250" description="V at 250 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-24.89 28.75" scaling="linear"/>
+                <variable id="WSat500" title="upward_wind_velocity_500" description="Wind Speed at 500Hp/Velocidad del viento a 500Hp" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-5.238 119.1" scaling="linear"/>
+                <variable id="Uat10:Vat10-group" title="wind_ten_velocity" description="Vector fields for wind_ten_velocity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-2.285 48.51" scaling="linear"/>
+                <variable id="WSat250" title="upward_wind_velocity_250" description="Wind Speed at 250Hp/Velocidad del viento a 250Hp" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-7.528 165.4" scaling="linear"/>
+                <variable id="Uat500" title="eastward_wind_500" description="U at 500 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-29.85 33.43" scaling="linear"/>
+                <variable id="RH" title="relative_humidity" description="relative_humidity" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-0.1083 50.19" scaling="linear"/>
+                <variable id="Uat700" title="eastward_wind_700" description="U at 700 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-17.35 25.67" scaling="linear"/>
+                <variable id="Uat850:Vat850-mag" title="Magnitude of wind 850" description="Magnitude of components:
+U at 850 hPA and
+V at 850 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-1.582 33.95" scaling="linear"/>
+                <variable id="Uat10" title="U at 10 M" description="U at 10 M" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-47.12 38.1" scaling="linear"/>
+                <variable id="Uat850:Vat850-dir" title="Direction of wind 850" description="Direction of components:
+U at 850 hPA and
+V at 850 hPA" palette="default" belowMinColor="#FF000000" aboveMaxColor="#FF000000" noDataColor="transparent" numColorBands="250" colorScaleRange="-198.0 197.9" scaling="linear"/>
+            </variables>
+        </dataset>
+        <dataset id="otro_wrf" title="otro_wrf" location="/ServerScripts/variablest_1.nc" queryable="true" downloadable="false" dataReaderClass="" copyrightStatement="" moreInfo="" disabled="false" updateInterval="-1">
+            <variables/>
+        </dataset>
+    </datasets>
+    <cache enabled="true">
+        <inMemorySizeMB>60000</inMemorySizeMB>
+        <elementLifetimeMinutes>0.0</elementLifetimeMinutes>
+    </cache>
+    <dynamicServices/>
+    <contact>
+        <name>Olmo S. Zavala Romero</name>
+        <organization>Grupo Interaccion Oceano Atmosfera</organization>
+        <telephone>56224048</telephone>
+        <email>olmozavala@atmosfera.unam.mx</email>
+    </contact>
+    <server>
+        <title>IOA ncWMS server</title>
+        <allowFeatureInfo>true</allowFeatureInfo>
+        <maxImageWidth>4096</maxImageWidth>
+        <maxImageHeight>4096</maxImageHeight>
+        <abstract> </abstract>
+        <keywords> </keywords>
+        <url> </url>
+        <allowglobalcapabilities>true</allowglobalcapabilities>
+    </server>
+    <crsCodes/>
+</config>
